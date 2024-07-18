@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBM Foundation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #444;
+        }
+        .contact-info {
+            margin-top: 30px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .donate-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff69b4; /* Bright pink */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .donate-button:hover {
+            background-color: #ff1493; /* Darker pink on hover */
+        }
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JBM Foundation</h1>
+    </header>
+
+    <section class="bio">
+        <p>JBM Foundation is a humanitarian organization dedicated to empowering underprivileged communities across Africa. We provide humanitarian aid during crises such as floods, offer free basic needs and medical care, actively combat FGM, and advocate for the rights of the vulnerable, ensuring a brighter future for all.</p>
+    </section>
+
+    <section class="donate-section">
+        <h2>Why You Should Donate</h2>
+        <ul>
+            <li><strong>Food:</strong> Your contribution can save lives because no human being survives without food.</li>
+            <li><strong>Medication:</strong> We cover expenses for medical services, making our medical care programs sustainable.</li>
+            <li><strong>FGM (Female Genital Mutilation):</strong> Legal assistance is crucial during rescue missions of affected girls. Many face rejection and separation and need emotional and financial support.</li>
+            <li><strong>Time of Crisis:</strong> Africa's unpredictable seasons lead to crises like floods, droughts, and famine, affecting many. Your support empowers affected families economically and emotionally through counseling, helping normalize their lives.</li>
+        </ul>
+
+        <a class="donate-button" href="https://www.paypal.com/donate/?hosted_button_id=3AJ5GPJNS5258">Donate via PayPal</a>
+        <a class="donate-button" href="#" onclick="donate('opera')">Donate via Opera Minipay</a>
+        <a class="donate-button" href="#contact" onclick="otherDonate()">Other Donation Methods</a>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:jbmfoundationafrica@gmail.com">jbmfoundationafrica@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/qr/GCNJH7ODKHWAC1">Open WhatsApp</a></p>
+        <p>Telegram: <a href="https://t.me/jbmfoundation">t.me/jbmfoundation</a></p>
+        <a class="contact-button" href="tel:+254762874718">Call Us</a>
+        <a class="contact-button" href="sms:+254762874718">Send SMS</a>
+    </section>
+
+    <script>
+        function donate(method) {
+            if (method === 'paypal') {
+                window.location.href = "https://www.paypal.com/donate/?hosted_button_id=3AJ5GPJNS5258";
+            } else if (method === 'opera') {
+                prompt("Copy this number to donate via Opera Minipay:", "+254762874718");
+            }
+        }
+
+        function otherDonate() {
+            alert("Dear donor, if you wish to donate via any other means other than PayPal or Opera Minipay, please contact us immediately via any of the contact details provided at the bottom of this page. We are available 24 hours, 7 days a week. Thank you for your donation.");
+        }
+    </script>
+</body>
+</html>
